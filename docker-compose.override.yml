@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  server:
+    volumes:
+      - .:/usr/src/app
+    environment:
+      - DEBUG=1
+  prisma:
+    ports:
+      - "4466:4466"
+
+volumes:
+  mysql:

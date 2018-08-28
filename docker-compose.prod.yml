@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  server:
+    environment:
+      - DEBUG=0
+    restart: always
+  prisma:
+    image: prismagraphql/prisma:1.13
+    restart: always
+    expose:
+      - "4466"
+  mysql:
+    restart: always
+
+volumes:
+  mysql:

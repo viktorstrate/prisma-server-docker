@@ -1,0 +1,14 @@
+{
+  "name": "prisma-server-docker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "docker-compose up",
+    "serve": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up --build --force-recreate -d"
+  },
+  "dependencies": {
+    "graphql-yoga": "^1.16.2",
+    "prisma-binding": "^2.1.5"
+  }
+}
